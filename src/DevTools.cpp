@@ -3,12 +3,12 @@
 #include "DevTools.hpp"
 #include "fonts/FeatherIcons.hpp"
 #include "fonts/OpenSans.hpp"
-#include "fonts/GeodeIcons.hpp"
+#include "fonts/SapphireIcons.hpp"
 #include "fonts/RobotoMono.hpp"
 #include "fonts/SourceCodeProLight.hpp"
 #include "platform/platform.hpp"
-#include <Geode/loader/Log.hpp>
-#include <Geode/loader/Mod.hpp>
+#include <Sapphire/loader/Log.hpp>
+#include <Sapphire/loader/Mod.hpp>
 #include "ImGui.hpp"
 
 DevTools* DevTools::get() {

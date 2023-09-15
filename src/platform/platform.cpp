@@ -1,9 +1,9 @@
 #include "platform.hpp"
 #include "../ImGui.hpp"
-#include <Geode/loader/Log.hpp>
-#include <Geode/cocos/platform/CCGL.h>
+#include <Sapphire/loader/Log.hpp>
+#include <Sapphire/cocos/platform/CCGL.h>
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
 static bool g_shouldPassEventsToGDButTransformed = false;
 static bool g_updateBuffer = false;

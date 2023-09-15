@@ -1,13 +1,13 @@
 #include "../DevTools.hpp"
-#include <Geode/loader/Loader.hpp>
-#include <Geode/loader/Mod.hpp>
-#include <Geode/utils/ranges.hpp>
-#include <Geode/binding/FMODAudioEngine.hpp>
-#include <Geode/modify/AppDelegate.hpp>
+#include <Sapphire/loader/Loader.hpp>
+#include <Sapphire/loader/Mod.hpp>
+#include <Sapphire/utils/ranges.hpp>
+#include <Sapphire/binding/FMODAudioEngine.hpp>
+#include <Sapphire/modify/AppDelegate.hpp>
 #include <fmod.hpp>
 #include <numeric>
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
 static float RAINBOW_HUE = 0.f;
 
@@ -44,7 +44,7 @@ void DevTools::drawSettings() {
     ImGui::Checkbox("Advanced Settings", &m_advancedSettings);
     if (ImGui::IsItemHovered()) {
         ImGui::SetTooltip(
-            "Shows advanced settings. Mostly useful only for development of Geode itself."
+            "Shows advanced settings. Mostly useful only for development of Sapphire itself."
         );
     }
     ImGui::PopStyleVar();
@@ -74,7 +74,7 @@ void DevTools::drawSettings() {
         GameManager::get()->m_resolution = selectedResolution;
 
         // TODO: idk how to do this on macos
-    #ifdef GEODE_IS_WINDOWS
+    #ifdef SAPPHIRE_IS_WINDOWS
         if (selectedResolution != 0) {
             auto size = GameManager::get()->resolutionForKey(selectedResolution);
             CCEGLView::get()->resizeWindow(size.width, size.height);
@@ -96,7 +96,7 @@ void DevTools::drawSettings() {
             size[1] = std::fabs(size[1]);
             customResolution = CCSizeMake(size[0], size[1]);
         }
-    #ifdef GEODE_IS_WINDOWS
+    #ifdef SAPPHIRE_IS_WINDOWS
         if (ImGui::Button("Apply##size-apply")) {
             GameManager::get()->m_resolution = 0;
             CCEGLView::get()->resizeWindow(customResolution.width, customResolution.height);
@@ -162,7 +162,7 @@ void DevTools::drawSettings() {
 
     ImVec4 color;
     color.w = 1.f;
-    for (auto c : std::string("Geode Team")) {
+    for (auto c : std::string("Sapphire Team")) {
         hue += 0.04f;
         ImGui::SameLine(0.f, 0.f);
         ImGui::ColorConvertHSVtoRGB(hue, .5f, 1.f, color.x, color.y, color.z);
@@ -170,7 +170,7 @@ void DevTools::drawSettings() {
     }
 
     ImGui::TextWrapped(
-        "Running Geode %s, DevTools %s",
+        "Running Sapphire %s, DevTools %s",
         Loader::get()->getVersion().toString().c_str(),
         Mod::get()->getVersion().toString().c_str()
     );

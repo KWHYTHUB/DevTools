@@ -12,13 +12,13 @@ add_library(${PROJECT_NAME} SHARED ${SOURCES} src/platform/Mac.mm)
 
 set_source_files_properties(src/platform/Mac.mm PROPERTIES SKIP_PRECOMPILE_HEADERS ON)
 
-if (NOT DEFINED ENV{GEODE_SDK})
-    message(FATAL_ERROR "Unable to find Geode SDK! Please define GEODE_SDK environment variable to point to Geode")
+if (NOT DEFINED ENV{SAPPHIRE_SDK})
+    message(FATAL_ERROR "Unable to find Sapphire SDK! Please define SAPPHIRE_SDK environment variable to point to Sapphire")
 else()
-    message(STATUS "Found Geode: $ENV{GEODE_SDK}")
+    message(STATUS "Found Sapphire: $ENV{SAPPHIRE_SDK}")
 endif()
 
-add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
+add_subdirectory($ENV{SAPPHIRE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/sapphire)
 
 CPMAddPackage("gh:ocornut/imgui#c191faf")
 
@@ -42,7 +42,7 @@ elseif(ANDROID)
 endif()
 
 # i still dont like this (alk)
-target_compile_definitions(geode-sdk INTERFACE GEODE_EXPOSE_SECRET_INTERNALS_IN_HEADERS_DO_NOT_DEFINE_PLEASE)
+target_compile_definitions(KWHYTHUB INTERFACE SAPPHIRE_EXPOSE_SECRET_INTERNALS_IN_HEADERS_DO_NOT_DEFINE_PLEASE)
 
-# Set up dependencies, resources, link Geode
-setup_geode_mod(${PROJECT_NAME})
+# Set up dependencies, resources, link Sapphire
+setup_sapphire_mod(${PROJECT_NAME})

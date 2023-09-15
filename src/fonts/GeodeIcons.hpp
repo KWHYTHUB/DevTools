@@ -4,7 +4,7 @@
 
 // https://tomeko.net/online_tools/file_to_hex.php?lang=en
 
-static unsigned char Font_geodeIcons[] {
+static unsigned char Font_sapphireIcons[] {
 0x00, 0x01, 0x00, 0x00, 0x00, 0x0B, 0x00, 0x80, 0x00, 0x03, 0x00, 0x30, 0x4F, 0x53, 0x2F, 0x32, 
 0x0F, 0x12, 0x06, 0x15, 0x00, 0x00, 0x00, 0xBC, 0x00, 0x00, 0x00, 0x60, 0x63, 0x6D, 0x61, 0x70, 
 0x17, 0x56, 0xD2, 0x94, 0x00, 0x00, 0x01, 0x1C, 0x00, 0x00, 0x00, 0x54, 0x67, 0x61, 0x73, 0x70, 
@@ -121,12 +121,12 @@ static unsigned char Font_geodeIcons[] {
 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00
 };
 
-#define geode_ICON_MIN_FA 0xe900
-#define geode_ICON_MAX_FA 0xe90d
+#define sapphire_ICON_MIN_FA 0xe900
+#define sapphire_ICON_MAX_FA 0xe90d
 
-#define geode_ICON_CLOSE      u8"\ue900"
-#define geode_ICON_DOCKEAST   u8"\ue901"
-#define geode_ICON_DOCKNORTH  u8"\ue904"
-#define geode_ICON_DOCKSOUTH  u8"\ue907"
-#define geode_ICON_DOCKWEST   u8"\ue90a"
-#define geode_ICON_DOCKPOP    u8"\ue90d"
+#define sapphire_ICON_CLOSE      u8"\ue900"
+#define sapphire_ICON_DOCKEAST   u8"\ue901"
+#define sapphire_ICON_DOCKNORTH  u8"\ue904"
+#define sapphire_ICON_DOCKSOUTH  u8"\ue907"
+#define sapphire_ICON_DOCKWEST   u8"\ue90a"
+#define sapphire_ICON_DOCKPOP    u8"\ue90d"

@@ -1,10 +1,10 @@
-#include <Geode/platform/platform.hpp>
+#include <Sapphire/platform/platform.hpp>
 
-#ifdef GEODE_IS_MACOS
+#ifdef SAPPHIRE_IS_MACOS
 
 #include "utils.hpp"
 
-#include <Geode/utils/string.hpp>
+#include <Sapphire/utils/string.hpp>
 #include <array>
 #include <thread>
 #include <ghc/fs_fwd.hpp>

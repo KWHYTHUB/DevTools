@@ -1,9 +1,9 @@
 #include "themes.hpp"
-#include <Geode/utils/ranges.hpp>
-#include <Geode/utils/general.hpp>
+#include <Sapphire/utils/ranges.hpp>
+#include <Sapphire/utils/general.hpp>
 #include <cocos2d.h>
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
 namespace {
     constexpr float clamp(float v) {

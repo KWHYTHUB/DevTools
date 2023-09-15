@@ -1,11 +1,11 @@
 #include "../platform/platform.hpp"
 #include "../fonts/FeatherIcons.hpp"
-#include <Geode/utils/cocos.hpp>
+#include <Sapphire/utils/cocos.hpp>
 #include "../DevTools.hpp"
 #include "../ImGui.hpp"
-#include <Geode/loader/Log.hpp>
+#include <Sapphire/loader/Log.hpp>
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
 void DevTools::drawNodePreview(CCNode* node) {
     // TODO: this creates a new texture every frame and kills my gpu :sob:
@@ -23,7 +23,7 @@ void DevTools::drawNodePreview(CCNode* node) {
 	CCPoint bb_min(bounding_box.getMinX(), bounding_box.getMinY());
 	CCPoint bb_max(bounding_box.getMaxX(), bounding_box.getMaxY());
 
-#ifdef GEODE_IS_WINDOWS
+#ifdef SAPPHIRE_IS_WINDOWS
     // TODO: define CCCamera::getEyeXYZ on mac
 	auto cameraParent = node;
 	while (cameraParent) {

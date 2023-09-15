@@ -1,10 +1,10 @@
 #include "../DevTools.hpp"
 #include "../ImGui.hpp"
 #include <misc/cpp/imgui_stdlib.h>
-#include <Geode/modify/AppDelegate.hpp>
-#include <Geode/loader/Index.hpp>
+#include <Sapphire/modify/AppDelegate.hpp>
+#include <Sapphire/loader/Index.hpp>
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
 void DevTools::drawAdvancedSettings() {
     ImGui::PushStyleVar(ImGuiStyleVar_FramePadding, { 1.f, 1.f });
@@ -97,9 +97,9 @@ ModMetadata DevTools::inputMetadata(void* treePtr, ModMetadata metadata) {
             ImGui::Text("version: %s", item.version.toString().c_str());
             const char* importance = "";
             switch (item.importance) {
-                case geode::ModMetadata::Dependency::Importance::Required: importance = "required"; break;
-                case geode::ModMetadata::Dependency::Importance::Recommended: importance = "recommended"; break;
-                case geode::ModMetadata::Dependency::Importance::Suggested: importance = "suggested"; break;
+                case sapphire::ModMetadata::Dependency::Importance::Required: importance = "required"; break;
+                case sapphire::ModMetadata::Dependency::Importance::Recommended: importance = "recommended"; break;
+                case sapphire::ModMetadata::Dependency::Importance::Suggested: importance = "suggested"; break;
             }
             ImGui::Text("importance: %s", importance);
             ImGui::Text("isResolved: %s", item.isResolved() ? "true" : "false");
@@ -123,8 +123,8 @@ ModMetadata DevTools::inputMetadata(void* treePtr, ModMetadata metadata) {
             ImGui::Text("version: %s", item.version.toString().c_str());
             const char* importance = "";
             switch (item.importance) {
-                case geode::ModMetadata::Incompatibility::Importance::Breaking: importance = "breaking"; break;
-                case geode::ModMetadata::Incompatibility::Importance::Conflicting: importance = "conflicting"; break;
+                case sapphire::ModMetadata::Incompatibility::Importance::Breaking: importance = "breaking"; break;
+                case sapphire::ModMetadata::Incompatibility::Importance::Conflicting: importance = "conflicting"; break;
             }
             ImGui::Text("importance: %s", importance);
             ImGui::Text("isResolved: %s", item.isResolved() ? "true" : "false");

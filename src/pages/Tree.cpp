@@ -1,14 +1,14 @@
 #include "../fonts/FeatherIcons.hpp"
-#include <Geode/utils/cocos.hpp>
+#include <Sapphire/utils/cocos.hpp>
 #include "../DevTools.hpp"
-#ifndef GEODE_IS_WINDOWS
+#ifndef SAPPHIRE_IS_WINDOWS
 #include <cxxabi.h>
 #endif
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
 std::string getNodeName(CCObject* node) {
-#ifdef GEODE_IS_WINDOWS
+#ifdef SAPPHIRE_IS_WINDOWS
     return typeid(*node).name() + 6;
 #else 
     {

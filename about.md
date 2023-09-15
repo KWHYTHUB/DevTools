@@ -1,6 +1,6 @@
 # DevTools
 
-Browser-like developer tools for Geode.
+Browser-like developer tools for Sapphire.
 
 Press `F11` (or `F10` on mac) to open up the dev tools.
 

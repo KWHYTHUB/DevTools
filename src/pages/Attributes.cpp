@@ -1,11 +1,11 @@
 #include "../fonts/FeatherIcons.hpp"
-#include <Geode/utils/cocos.hpp>
+#include <Sapphire/utils/cocos.hpp>
 #include "../DevTools.hpp"
 #include <misc/cpp/imgui_stdlib.h>
-#include <Geode/binding/CCMenuItemSpriteExtra.hpp>
+#include <Sapphire/binding/CCMenuItemSpriteExtra.hpp>
 #include "../platform/utils.hpp"
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
 #define AXIS_GET(Name_) \
     &AxisLayoutOptions::get##Name_, \

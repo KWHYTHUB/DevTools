@@ -1,7 +1,7 @@
 #include <cocos2d.h>
-#include <Geode/modify/CCTouchDispatcher.hpp>
-#include <Geode/modify/CCMouseDispatcher.hpp>
-#include <Geode/modify/CCIMEDispatcher.hpp>
+#include <Sapphire/modify/CCTouchDispatcher.hpp>
+#include <Sapphire/modify/CCMouseDispatcher.hpp>
+#include <Sapphire/modify/CCIMEDispatcher.hpp>
 #include "platform/platform.hpp"
 #include "DevTools.hpp"
 #include "ImGui.hpp"
@@ -49,7 +49,7 @@ void DevTools::newFrame() {
     );
     io.DeltaTime = director->getDeltaTime();
 
-    const auto mousePos = toVec2(geode::cocos::getMousePos());
+    const auto mousePos = toVec2(sapphire::cocos::getMousePos());
     io.AddMousePosEvent(mousePos.x, mousePos.y);
 
     // TODO: text input

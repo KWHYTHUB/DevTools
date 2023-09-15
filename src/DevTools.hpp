@@ -4,11 +4,11 @@
 #include <imgui.h>
 #include "themes.hpp"
 #include <cocos2d.h>
-#include <Geode/utils/cocos.hpp>
+#include <Sapphire/utils/cocos.hpp>
 #include <unordered_map>
-#include <Geode/loader/Index.hpp>
+#include <Sapphire/loader/Index.hpp>
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
 enum class HighlightMode {
     Selected,

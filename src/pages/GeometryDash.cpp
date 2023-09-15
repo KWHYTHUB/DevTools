@@ -1,9 +1,9 @@
 #include "../platform/platform.hpp"
 #include "../DevTools.hpp"
 #include "../ImGui.hpp"
-#include <Geode/utils/ranges.hpp>
-#include <Geode/binding/FLAlertLayer.hpp>
-#include <Geode/binding/GJDropDownLayer.hpp>
+#include <Sapphire/utils/ranges.hpp>
+#include <Sapphire/binding/FLAlertLayer.hpp>
+#include <Sapphire/binding/GJDropDownLayer.hpp>
 
 void drawRowAxisArrow(
     ImDrawList& foreground,
@@ -169,7 +169,7 @@ void DevTools::drawHighlight(CCNode* node, HighlightMode mode) {
 	CCPoint bb_min(bounding_box.getMinX(), bounding_box.getMinY());
 	CCPoint bb_max(bounding_box.getMaxX(), bounding_box.getMaxY());
 
-#ifdef GEODE_IS_WINDOWS
+#ifdef SAPPHIRE_IS_WINDOWS
 	auto cameraParent = node;
 	while (cameraParent) {
 		auto camera = cameraParent->getCamera();
@@ -226,7 +226,7 @@ void DevTools::drawHighlight(CCNode* node, HighlightMode mode) {
                 tmin, tmax, IM_COL32(255, 155, 55, 255),
                 0.f, 0, 4.f
             );
-            // built-in Geode layouts get special extra markings
+            // built-in Sapphire layouts get special extra markings
             if (auto layout = typeinfo_cast<AxisLayout*>(node->getLayout())) {
                 drawLayoutArrows(foreground, layout, tmax, tmin);
             }

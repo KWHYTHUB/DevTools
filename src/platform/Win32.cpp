@@ -1,12 +1,12 @@
-#include <Geode/platform/platform.hpp>
+#include <Sapphire/platform/platform.hpp>
 
-#ifdef GEODE_IS_WINDOWS
+#ifdef SAPPHIRE_IS_WINDOWS
 
-#include <Geode/modify/CCEGLView.hpp>
+#include <Sapphire/modify/CCEGLView.hpp>
 #include "platform.hpp"
 
 using namespace cocos2d;
-using namespace geode;
+using namespace sapphire;
 
 ImGuiKey keyFromGLFW(int key) {
     if (key >= GLFW_KEY_0 && key <= GLFW_KEY_9) {

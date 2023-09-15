@@ -1,19 +1,19 @@
 
 #include "platform/platform.hpp"
-#include <Geode/modify/CCKeyboardDispatcher.hpp>
-#include <Geode/modify/AchievementNotifier.hpp>
-#include <Geode/modify/CCDirector.hpp>
-#include <Geode/modify/CCEGLView.hpp>
+#include <Sapphire/modify/CCKeyboardDispatcher.hpp>
+#include <Sapphire/modify/AchievementNotifier.hpp>
+#include <Sapphire/modify/CCDirector.hpp>
+#include <Sapphire/modify/CCEGLView.hpp>
 #include "DevTools.hpp"
 #include <imgui.h>
 #include "ImGui.hpp"
 
-using namespace geode::prelude;
+using namespace sapphire::prelude;
 
-// todo: use shortcuts api once Geode has those
+// todo: use shortcuts api once Sapphire has those
 class $modify(CCKeyboardDispatcher) {
     bool dispatchKeyboardMSG(enumKeyCodes key, bool down) {
-        if (down && (key == KEY_F11 GEODE_MACOS(|| key == KEY_F10))) {
+        if (down && (key == KEY_F11 SAPPHIRE_MACOS(|| key == KEY_F10))) {
             DevTools::get()->toggle();
             return true;
         }
